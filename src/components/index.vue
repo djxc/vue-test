@@ -21,10 +21,10 @@ export default {
     }
   },
   methods: {
-    login: function() {
-        this.$router.push({ path:'/home'});      // 实现页面跳转
+    login: function () {
+      this.$router.push({path: '/home'})// 实现页面跳转
     },
-    regist: function() { }
+    regist: function () { }
   }
 }
 </script>

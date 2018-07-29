@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import DJ from '@/components/dj'
+import map from '@/components/map'
 import index from '@/components/index'
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/dj',
-      name: 'dj',
-      component: DJ
+      path: '/map',
+      name: 'map',
+      component: map
     },
     {
       path: '/',
