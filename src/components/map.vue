@@ -6,8 +6,9 @@
 </template>
 
 <script>
+import TDLayer from '../assets/js/TDLayer'
 import * as esriLoader from 'esri-loader'
-esriLoader.loadCss('http://localhost:8080/arcgis_js_api/library/4.8/esri/css/main.css')
+esriLoader.loadCss('http://121.248.96.254:8080/arcgis_js_api/library/4.8/esri/css/main.css')
 export default {
   name: 'dj',
   data () {
@@ -16,32 +17,6 @@ export default {
     }
   },
   methods: {
-    createMap: function () {
-      const options = {
-        url: 'http://localhost:8080/arcgis_js_api/library/4.8/dojo/dojo.js'
-      }
-      esriLoader
-        .loadModules(['esri/views/MapView', 'esri/WebMap'], options)
-        .then(([MapView, WebMap]) => {
-          // then we load a web map from an id
-          var webmap = new WebMap({
-            portalItem: {
-              // autocasts as new PortalItem()
-              id: 'f2e9b762544945f390ca4ac3671cfa72'
-            }
-          })
-          // and we show that map in a container w/ id #viewDiv
-          var view = new MapView({
-            map: webmap,
-            container: 'map',
-            zoom: 4
-          })
-        })
-        .catch(err => {
-          // handle any errors
-          console.error(err)
-        })
-    },
     createMap3: function () {
       const options = {
         url: 'https://js.arcgis.com/3.25/'
@@ -59,18 +34,21 @@ export default {
         // handle any script or module loading errors
           console.error(err)
         })
+    },
+    createMap1: function () {
+      // 将1改成其他值加载天地图
+      TDLayer.initMap(1)
     }
   },
   mounted () {
-    this.createMap()
+    this.createMap1()
   }
 }
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
+h1,h2 {
   font-weight: normal;
 }
 ul {

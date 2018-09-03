@@ -27,4 +27,4 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+1.arcigs api for javascript  4.8 加载天地图时需要用ip访问网页，如果用localhost则会将http自动改成https

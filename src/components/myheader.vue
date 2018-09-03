@@ -1,7 +1,7 @@
 <template>
-    <div id="myheader">
-      <div id="conbtn">
-        <label for="" id="conLeft">菜单</label>
+    <div id='myheader'>
+      <div id='conbtn'>
+        <span class="label label-info">菜单</span>
       </div>
       <div>
         <h1>{{ msg }}</h1>
@@ -9,6 +9,7 @@
     </div>
 </template>
 <script>
+import $ from 'jquery'
 export default {
   name: 'myheader',
   data () {
@@ -18,15 +19,15 @@ export default {
   }
 }
 $(function () {
-    $('#conLeft').click(function () {
-        $("#left").animate({width:'toggle'},350)
-    })
+  $('#conbtn').click(function () {
+    $('#left').animate({width: 'toggle'}, 350)
+  })
 })
 </script>
 <style>
 h1, h2 {
   font-weight: normal;
-  color: #42b983;
+  color: rgb(230, 209, 22);
 }
 #myheader{
   background-color: rgb(5, 5, 4);
@@ -48,7 +49,7 @@ h1, h2 {
 }
 #conLeft {
   font-size: 20px;
-  color: rgb(11, 107, 70);
+  color: rgb(230, 209, 22);
 
 }
 </style>

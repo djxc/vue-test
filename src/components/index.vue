@@ -1,10 +1,14 @@
 <template>
   <div class="login">
-    <label>{{uname}}</label><input class="input"/><br>
-    <label>{{password}}</label><input class="input"/><br>
+    <ul>
+      <li>
+        <label>{{uname}}</label><input class="input form-control" placeholder="请输入用户名"/><br>
+      </li>
+    </ul>
+    <label>{{password}}<input class="input form-control" placeholder="请输入密码"/></label><br>
     <div class="btndiv">
-        <button id="login" v-on:click="login">登录</button>
-        <button id="regist" v-on:click="regist">注册</button>
+        <button id="login"  class="btn btn-primary" v-on:click="login">登录</button>
+        <button id="regist" class="btn btn-primary" v-on:click="regist">注册</button>
     </div>
   </div>
 </template>
@@ -71,6 +75,7 @@ label {
     font-size: 18px;
 }
 .input {
-    height: 23px;
+  height: 30px;
+  width: 150px;
 }
 </style>
